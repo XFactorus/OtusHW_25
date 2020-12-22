@@ -11,7 +11,7 @@ final class ImageDetectorService {
     
     func detectImageType(_ image: UIImage) {
         
-        detectionCallback?(.detectionFailed)
+        detectionCallback?(.detectionStarted)
 
         guard let coreModel = configCoreMLModel(), let image = CIImage(image: image) else {
             detectionCallback?(.detectionFailed)
